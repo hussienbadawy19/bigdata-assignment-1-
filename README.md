@@ -42,11 +42,20 @@ customer-analytics/
 ├── analytics.py
 ├── visualize.py
 ├── cluster.py
-├── run_pipeline.py
 ├── summary.sh
 ├── laptops_Dataset.csv
 ├── README.md
 └── results
+
+## docker commands
+docker cp $CONTAINER_NAME:/app/pipeline/*.csv ./results/
+docker cp $CONTAINER_NAME:/app/pipeline/*.txt ./results/
+docker cp $CONTAINER_NAME:/app/pipeline/*.png ./results/
+
+
+docker stop $CONTAINER_NAME
+docker rm $CONTAINER_NAME
+
 
 ## Output Files
 
@@ -109,4 +118,5 @@ The `summary_plot.png` file contains 6 visualizations:
 Team Members: Maryam Hesham 231000195
 Hussien Badawy 231000104
 Asser Ghazi 231002071
+Ahmed Alaa 231001930
 Ahmed Alaa 231001930
